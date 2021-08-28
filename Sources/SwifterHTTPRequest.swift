@@ -44,6 +44,7 @@ public enum HTTPMethodType: String {
     case CONNECT
 }
 
+@available(iOSApplicationExtension, unavailable)
 public class HTTPRequest: NSObject, URLSessionDataDelegate {
     
     public typealias UploadProgressHandler = (_ bytesWritten: Int, _ totalBytesWritten: Int, _ totalBytesExpectedToWrite: Int) -> Void

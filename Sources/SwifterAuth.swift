@@ -100,6 +100,7 @@ public extension Swifter {
      */
     #if os(iOS)
     @available(iOS, deprecated: 13.0)
+    @available(iOSApplicationExtension, unavailable)
     func authorize(withCallback callbackURL: URL,
                    presentingFrom presenting: UIViewController?,
                    forceLogin: Bool = false,
@@ -128,6 +129,7 @@ public extension Swifter {
         }, failure: failure)
     }
 
+    @available(iOSApplicationExtension, unavailable)
     func authorizeSSO(success: SSOTokenSuccessHandler?, failure: FailureHandler? = nil) {
         guard let client = client as? SwifterAppProtocol else {
             let error = SwifterError(message: "SSO not supported AppOnly client",
